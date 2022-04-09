@@ -10,7 +10,7 @@ Next run the following command to start the appliation:
 This will start the backend server.
 Check the localhost on 127.0.0.0:8000/docs to see available APIs
 
-# API Implemented
+## Implemented APIs
 1. The first impementation is root ("/") which serve as default to 127.0.0.0/8000   
 2. The second API get the list of all people  
 3. The third API get people listed as either living in a {city} deafult:London, or whose current coordinates are within 50 miles default of London.
