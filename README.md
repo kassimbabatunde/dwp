@@ -1,8 +1,8 @@
 # DWP API Implementation
  
-The repo consist of the both backend API implementation.  
+The repo consist of backend DWP API implementation.  
 ## Backend Implementation  
-The backend in implmented using python3.9 with FastAPI framework.    
+The backend in implemented using python3.9 with FastAPI framework.    
 Run pip command to install FastAPI and the required python library for FastApi using following command:  
 ```pip install -r requirements.txt```  
 Next run the following command to start the appliation:  
