@@ -29,8 +29,8 @@ async def get_people():
         return {'code':'400'}
 
 
-@app.get("/people/{city}")
-async def get_people_in_city(city:str,miles:int=50):
+@app.get("/people/city/")
+async def get_people_in_city(city:str='london',miles:int=50):
 
     location = geocode(city.lower())
     city_lat_long  = (float('{:.6f}'.format(location.latitude)),float('{:.7f}'.format(location.longitude)))
@@ -39,7 +39,6 @@ async def get_people_in_city(city:str,miles:int=50):
         if resp.status_code == 200:
             people = []
             result = resp.json()
-            print('Lenght of data is {}'.format(len(result)))
             for index in result:
                 city_distance = float('{:1f}'.format(distance.distance((city_lat_long),(float(index['latitude']),float(index['longitude']))).miles))
                 if city_distance <= float(miles):
